@@ -2,10 +2,10 @@ const express = require('express');
 
 const SessionController = require('./controllers/SessionController');
 
+const ProfileController = require('./controllers/ProfileController');
+
 const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController');
-
-const ProfileController = require('./controllers/ProfileController');
 
 const routes = express.Router();
 
