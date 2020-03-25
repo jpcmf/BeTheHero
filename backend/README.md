@@ -1,0 +1,5 @@
+### Techs
+
+- Nodemon
+- Knex
+- 
