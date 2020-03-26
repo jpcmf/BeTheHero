@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Input from '~/components/Form/Input';
+import Textarea from '~/components/Form/Textarea';
 
 import colors from '~/styles/colors';
 
@@ -70,10 +72,20 @@ export const FormWrapper = styled.div`
       font-size: 32px;
       margin-bottom: 32px;
     }
+
+    span {
+      animation: 300ms ease-out 0s 1 slideInFromLeft;
+      color: ${colors.danger};
+      display: block;
+      padding: 7px 5px;
+      border-radius: 15px;
+      font-size: 12px;
+      word-wrap: break-word;
+    }
   }
 `;
 
-export const Input = styled.input.attrs(({ type }) => ({
+export const InputWrapper = styled(Input).attrs(({ type }) => ({
   type: type || 'text',
 }))`
   border-radius: 8px;
@@ -85,10 +97,11 @@ export const Input = styled.input.attrs(({ type }) => ({
   width: 100%;
 `;
 
-export const Textarea = styled.textarea`
+export const TextareaWrapper = styled(Textarea)`
   border-radius: 8px;
   border: solid 1px ${colors.lightGrey};
   color: ${colors.darkGrey};
+  display: block;
   line-height: 20px;
   margin-top: 8px;
   min-height: 140px;

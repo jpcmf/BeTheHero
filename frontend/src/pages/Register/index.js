@@ -94,6 +94,7 @@ export default function Register() {
         <FormWrapper>
           <Form ref={formRef} onSubmit={handleRegister}>
             <InputWrapper
+              autoFocus
               name="name"
               placeholder="Nome da ONG"
               value={name}

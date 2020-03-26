@@ -23,6 +23,7 @@ import api from '~/services/api';
 
 export default function Login() {
   const formRef = useRef(null);
+
   const [id, setId] = useState('');
 
   useEffect(() => {
@@ -79,6 +80,7 @@ export default function Login() {
         <Form ref={formRef} onSubmit={handleSession}>
           <h1>Faça seu login</h1>
           <InputWrapper
+            autoFocus
             name="id"
             placeholder="Sua ID"
             value={id}
