@@ -28,7 +28,7 @@ export default function NewIncident() {
 
   const ongId = localStorage.getItem('ongId');
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); //eslint-disable-line
 
   useEffect(() => {
     document.title = 'Be The Hero | New Incident';
