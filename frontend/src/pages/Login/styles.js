@@ -3,24 +3,56 @@ import { Link } from 'react-router-dom';
 import Input from '~/components/Form/Input';
 
 import colors from '~/styles/colors';
+import { device } from '~/styles/device';
 
 export const Container = styled.div`
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1120px;
+  padding: 0 16px;
   width: 100%;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  @media ${device.laptopL} {
+    padding: 0;
+  }
+
+  img {
+    display: none;
+    height: auto;
+    max-width: 100%;
+
+    @media ${device.laptop} {
+      display: block;
+    }
+  }
 `;
 
 export const FormWrapper = styled.div`
   width: 100%;
   max-width: 350px;
-  margin-right: 30px;
+  text-align: center;
+
+  @media ${device.laptop} {
+    margin-right: 30px;
+    text-align: left;
+  }
 
   form {
-    margin-top: 100px;
+    margin-top: 50px;
+
+    @media ${device.laptop} {
+      margin-top: 100px;
+    }
 
     h1 {
       font-size: 32px;
