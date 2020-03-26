@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Input from '~/components/Form/Input';
 
 import colors from '~/styles/colors';
 
@@ -70,16 +71,36 @@ export const FormWrapper = styled.div`
       font-size: 32px;
       margin-bottom: 32px;
     }
+
+    span {
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-10%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      animation: 300ms ease-out 0s 1 slideInFromLeft;
+      color: ${colors.danger};
+      display: block;
+      padding: 7px 5px;
+      border-radius: 15px;
+      font-size: 12px;
+      word-wrap: break-word;
+    }
   }
 `;
 
 export const InputGroup = styled.div`
   display: grid;
-  grid-template-columns: 1fr 20%;
+  grid-template-columns: 1fr 25%;
   grid-gap: 8px;
 `;
 
-export const Input = styled.input.attrs(({ type }) => ({
+export const InputWrapper = styled(Input).attrs(({ type }) => ({
   type: type || 'text',
 }))`
   border-radius: 8px;
