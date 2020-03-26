@@ -2,6 +2,7 @@ export default {
   black: '#000',
   danger: '#e02041',
   grey: '#f0f0f5',
+  grey2: '#737380',
   dark: '#444',
   darkGrey: '#333',
   darkGrey2: '#414141',

@@ -28,9 +28,9 @@ export const FormWrapper = styled.div`
   }
 `;
 
-export const Input = styled.input.attrs({
-  type: 'text',
-})`
+export const Input = styled.input.attrs(({ type }) => ({
+  type: type || 'text',
+}))`
   width: 100%;
   height: 60px;
   color: ${colors.darkGrey};
