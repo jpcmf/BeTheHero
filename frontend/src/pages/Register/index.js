@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Form } from '@unform/web';
 import { toast } from 'react-toastify';
 import * as Yup from 'yup';
+
 import { FiArrowLeft } from 'react-icons/fi';
 
 import { ReactComponent as Logo } from '~/assets/logo.svg';

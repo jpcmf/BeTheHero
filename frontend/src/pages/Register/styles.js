@@ -73,16 +73,6 @@ export const FormWrapper = styled.div`
     }
 
     span {
-      @keyframes slideInFromLeft {
-        0% {
-          transform: translateX(-10%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
       animation: 300ms ease-out 0s 1 slideInFromLeft;
       color: ${colors.danger};
       display: block;

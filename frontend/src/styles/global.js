@@ -38,4 +38,15 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 `;
