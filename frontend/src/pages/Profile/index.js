@@ -83,16 +83,20 @@ export default function Profile() {
   return (
     <Container>
       <Header>
-        <Logo />
-        <span>
-          Bem-vinda, <span>{ongName}</span>
-        </span>
+        <div>
+          <Logo />
+          <span>
+            Bem-vinda, <span>{ongName}</span>
+          </span>
+        </div>
 
-        <RegisterLink to="/incidents/new">Cadastrar novo caso</RegisterLink>
+        <div>
+          <RegisterLink to="/incidents/new">Cadastrar novo caso</RegisterLink>
 
-        <LogoutButton onClick={handleLogout}>
-          <FiPower size={18} color={colors.danger} />
-        </LogoutButton>
+          <LogoutButton onClick={handleLogout}>
+            <FiPower size={18} color={colors.danger} />
+          </LogoutButton>
+        </div>
       </Header>
       <Content>
         <h1>Casos cadastrados</h1>
