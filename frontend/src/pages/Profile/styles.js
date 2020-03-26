@@ -17,6 +17,11 @@ export const Header = styled.header`
   span {
     font-size: 20px;
     margin-left: 24px;
+
+    > span {
+      font-weight: 500;
+      margin: 0;
+    }
   }
 
   svg {
