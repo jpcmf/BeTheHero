@@ -1,0 +1,17 @@
+export default {
+  black: '#000',
+  danger: '#e02041',
+  grey: '#f0f0f5',
+  grey2: '#737380',
+  grey3: '#a8a8b3',
+  dark: '#444',
+  darkGrey: '#333',
+  darkGrey2: '#414141',
+  lightGrey: '#dcdce6',
+  info: '#4d85ee',
+  primary: '#ee4d64',
+  secondary: '#f5f5f5',
+  success: '#31DB7D',
+  white: '#fff',
+  brand: '#1a90e8',
+};
