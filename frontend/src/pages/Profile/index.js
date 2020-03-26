@@ -20,7 +20,9 @@ export default function Profile() {
       <Header>
         <Logo />
         <span>Bem vinda, APAD</span>
+
         <RegisterLink to="/incidents/new">Cadastrar novo caso</RegisterLink>
+
         <LogoutButton>
           <FiPower size={18} color={colors.danger} />
         </LogoutButton>

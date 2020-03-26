@@ -3,8 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
 
 export default createGlobalStyle`
-  /* @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap'); */
-
   * {
     box-sizing: border-box;
     margin: 0;
@@ -25,7 +23,7 @@ export default createGlobalStyle`
     background-color: ${colors.grey};
   }
 
-  body, input, button {
+  body, input, button, textarea {
     color: ${colors.dark};
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
