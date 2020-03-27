@@ -3,3 +3,4 @@
 - Nodemon
 - Knex
 - Celebrate
+- Jest
