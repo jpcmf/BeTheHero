@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   ScrollView,
   View,
@@ -15,6 +15,8 @@ import { Feather } from '@expo/vector-icons';
 import logo from '../../assets/logo.png';
 
 import styles from './styles';
+
+import api from '../../services/api';
 
 export default function Details() {
   const navigation = useNavigation();

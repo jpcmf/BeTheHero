@@ -38,7 +38,7 @@ export default StyleSheet.create({
   },
 
   incidentList: {
-    marginTop: 32
+    marginTop: 20
   },
 
   incident: {
