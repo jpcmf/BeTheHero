@@ -36,7 +36,7 @@ export default function Details() {
 
   function sendWhatsApp() {
     Linking.openURL(
-      `whatsapp://send?phone=${incident.whatsapp}&&text=${message}`
+      `whatsapp://send?phone=55${incident.whatsapp}&&text=${message}`
     );
   }
 
@@ -57,7 +57,7 @@ export default function Details() {
           <Feather name="arrow-left" size={28} color="#e02041" />
         </TouchableOpacity>
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.incident}>
           <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
           <Text style={styles.incidentValue}>
