@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Linking
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import * as MailComposer from 'expo-mail-composer';
 
 import { Feather } from '@expo/vector-icons';
@@ -16,25 +16,34 @@ import logo from '../../assets/logo.png';
 
 import styles from './styles';
 
-import api from '../../services/api';
-
 export default function Details() {
   const navigation = useNavigation();
-  const message =
-    'Olá APAD, estou entrando em contato pois gostaria de ajudar no caso "Caso 1" com o valor de R$ 120,00';
+  const route = useRoute();
+
+  const incident = route.params.item;
+  const message = `Olá ${
+    incident.name
+  }, estou entrando em contato pois gostaria de ajudar no caso ${
+    incident.title
+  } com o valor de ${Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(incident.value)}`;
 
   function navigateBack() {
     navigation.goBack();
   }
 
   function sendWhatsApp() {
-    Linking.openURL(`whatsapp://send?phone=5541987850505&&text=${message}`);
+    Linking.openURL(
+      `whatsapp://send?phone=${incident.whatsapp}&&text=${message}`
+    );
   }
 
   function sendMail() {
     MailComposer.composeAsync({
-      subject: 'Herói do caso: Caso 1',
-      recipients: ['jpfricks@gmail.com'],
+      subject: `Herói do caso: ${incident.title}`,
+      recipients: [incident.email],
       body: message
     });
   }
@@ -50,24 +59,21 @@ export default function Details() {
       </View>
       <ScrollView>
         <View style={styles.incident}>
-          <Text style={([styles.incidentProperty], { marginTop: 0 })}>
-            ONG:
+          <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
+          <Text style={styles.incidentValue}>
+            {incident.name} de {incident.city}/{incident.uf}
           </Text>
-          <Text style={styles.incidentValue}>APAD</Text>
 
           <Text style={styles.incidentProperty}>CASO:</Text>
-          <Text style={styles.incidentValue}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            maximus nibh quis varius posuere. Ut euismod tincidunt auctor.
-            Aliquam sit amet mauris eget mauris imperdiet pretium a at massa.
-            Mauris rhoncus purus eu ante elementum vehicula. Vivamus quis
-            malesuada tellus, in egestas sem. Donec sagittis ut odio ac posuere.
-            Phasellus at faucibus velit, et pulvinar arcu. Vivamus quam orci,
-            consectetur placerat efficitur vel, consequat non odio. Vestibulum
-          </Text>
+          <Text style={styles.incidentValue}>{incident.description}</Text>
 
           <Text style={styles.incidentProperty}>VALOR:</Text>
-          <Text style={styles.incidentValue}>120</Text>
+          <Text style={styles.incidentValue}>
+            {Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
+            }).format(incident.value)}
+          </Text>
         </View>
         <View style={styles.contactBox}>
           <Text style={styles.heroTitle}>Salve o dia!</Text>
