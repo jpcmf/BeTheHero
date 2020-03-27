@@ -14,61 +14,65 @@ export default StyleSheet.create({
     justifyContent: 'space-between'
   },
 
-  headerText: {
-    color: '#737380',
-    fontSize: 15
-  },
-
-  headerTextBold: {
-    fontWeight: 'bold'
-  },
-
-  title: {
-    color: '#13131a',
-    fontSize: 30,
-    fontWeight: 'bold',
+  incident: {
+    padding: 24,
+    borderRadius: 8,
+    backgroundColor: '#FFF',
     marginBottom: 16,
     marginTop: 48
   },
 
-  description: {
+  incidentProperty: {
+    fontSize: 14,
+    color: '#41414d',
+    fontWeight: 'bold',
+    marginTop: 24
+  },
+
+  incidentValue: {
+    fontSize: 15,
     color: '#737380',
-    fontSize: 16,
-    lineHeight: 24
+    marginTop: 8
   },
 
-  incidentList: {
-    marginTop: 32
-  },
-
-  incident: {
+  contactBox: {
     padding: 24,
     borderRadius: 8,
     backgroundColor: '#FFF',
     marginBottom: 16
   },
 
-  incidentProperty: {
-    fontSize: 14,
-    color: '#41414d',
-    fontWeight: 'bold'
+  heroTitle: {
+    color: '#13131a',
+    fontSize: 20,
+    fontWeight: 'bold',
+    lineHeight: 30
   },
 
-  incidentValue: {
-    fontSize: 15,
+  heroContact: {
     color: '#737380',
-    marginTop: 10,
-    marginBottom: 25
+    fontSize: 16,
+    lineHeight: 24,
+    marginTop: 16
   },
 
-  detailButton: {
+  actions: {
+    marginTop: 16,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
+  },
+
+  actionButton: {
+    backgroundColor: '#e02041',
+    borderRadius: 8,
+    height: 50,
+    width: '48%',
+    justifyContent: 'center',
     alignItems: 'center'
   },
 
-  detailButtonText: {
-    color: '#e02041',
+  actionButtonText: {
+    color: '#FFF',
     fontSize: 15,
     fontWeight: 'bold'
   }

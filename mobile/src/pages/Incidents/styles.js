@@ -57,7 +57,7 @@ export default StyleSheet.create({
   incidentValue: {
     fontSize: 15,
     color: '#737380',
-    marginTop: 10,
+    marginTop: 8,
     marginBottom: 25
   },
 
