@@ -42,7 +42,19 @@ export default function Incidents() {
             <Text style={styles.incidentValue}>APAD</Text>
 
             <Text style={styles.incidentProperty}>CASO:</Text>
-            <Text style={styles.incidentValue}>Caso 1</Text>
+            <Text style={styles.incidentValue}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              maximus nibh quis varius posuere. Ut euismod tincidunt auctor.
+              Aliquam sit amet mauris eget mauris imperdiet pretium a at massa.
+              Mauris rhoncus purus eu ante elementum vehicula. Vivamus quis
+              malesuada tellus, in egestas sem. Donec sagittis ut odio ac
+              posuere. Phasellus at faucibus velit, et pulvinar arcu. Vivamus
+              quam orci, consectetur placerat efficitur vel, consequat non odio.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Nam volutpat ante eu nibh interdum
+              condimentum. Fusce venenatis magna nunc, eu tristique magna rutrum
+              congue.
+            </Text>
 
             <Text style={styles.incidentProperty}>VALOR:</Text>
             <Text style={styles.incidentValue}>120</Text>
