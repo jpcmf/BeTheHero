@@ -86,7 +86,7 @@ export default function Profile() {
         <div>
           <Logo />
           <span>
-            Bem-vinda, <span>{ongName}</span>
+            Bem-vindo(a), <span>{ongName}</span>
           </span>
         </div>
 
