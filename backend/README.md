@@ -2,3 +2,4 @@
 
 - Nodemon
 - Knex
+- Celebrate
